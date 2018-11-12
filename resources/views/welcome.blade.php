@@ -4,7 +4,7 @@
 <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome to Kiyoshi's Sushis Restaurant</div>
+          <div class="intro-lead-in">Welcome to Kiyoshi's Sushi Restaurant</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
         </div>
       </div>
