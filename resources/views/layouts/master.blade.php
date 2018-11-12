@@ -21,14 +21,41 @@
   </head>
 
   <body>
-    @include ('layouts.nav')
-
-    <div class ="container">
-    @yield ('content')
+    @include('layouts.nav')
     
+    @if ($flash = session('message'))
+      <div id="flash-message" class="alert alert-success" role="alert" >
+          
+          {{ $flash }}
+      </div>
+    @endif 
+
+   
+    <div class="blog-header">
+
+      <div class="container">
+
+
+        <br/><br/><br/><br/>
+        <!-- <p class="lead blog-description">Register Here!!!</p> -->
+      </div>
     </div>
 
-  @include('layouts.footer')
+    <div class="container">
+
+      <div class="row">
+
+        @yield('content')
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    
+    @include('layouts.footer')
+
+  
   </body>
 </html>
    
