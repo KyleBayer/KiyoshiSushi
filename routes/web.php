@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/login', 'Auth\LoginController@credentials')->name('home');
+Route::get('/login', 'Auth\LoginController@login')->name('home');
