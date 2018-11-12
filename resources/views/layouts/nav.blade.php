@@ -13,7 +13,7 @@
               <a class="nav-link js-scroll-trigger" href="./login">Login</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./aboutus.php">Register</a>
+              <a class="nav-link js-scroll-trigger" href="./register">Register</a>
             </li>
             
           </ul>
