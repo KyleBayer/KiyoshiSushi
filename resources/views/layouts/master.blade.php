@@ -9,26 +9,53 @@
 
     <title>Kiyoshi Sushi</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
   </head>
 
   <body>
-    @include ('layouts.nav')
-
-    <div class ="container">
-    @yield ('content')
+    @include('layouts.nav')
     
+    @if ($flash = session('message'))
+      <div id="flash-message" class="alert alert-success" role="alert" >
+          
+          {{ $flash }}
+      </div>
+    @endif 
+
+   
+    <div class="blog-header">
+
+      <div class="container">
+
+
+        <br/><br/><br/><br/>
+        <!-- <p class="lead blog-description">Register Here!!!</p> -->
+      </div>
     </div>
 
-  @include('layouts.footer')
+    <div class="container">
+
+      <div class="row">
+
+        @yield('content')
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    
+    @include('layouts.footer')
+
+  
   </body>
 </html>
    
