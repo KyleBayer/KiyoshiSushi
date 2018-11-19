@@ -46,12 +46,12 @@ class LoginController extends Controller
      */
     protected function credentials(Request $request)
     {
-        $field = filter_var($request->get($this->username()), FILTER_VALIDATE_EMAIL)
-            ? $this->username()
-            : 'username';
+        $field = filter_var($request->get($this->email())
+            ? $this->email()
+            : 'email';
 
         return [
-            $field => $request->get($this->username()),
+            $field => $request->get($this->email()),
             'password' => $request->password,
         ];
     }
