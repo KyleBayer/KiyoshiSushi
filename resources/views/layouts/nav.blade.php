@@ -15,8 +15,12 @@
              <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="./register">Register</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="./order">Order</a>
+            </li>
             
           </ul>
         </div>
       </div>
     </nav>
+    
