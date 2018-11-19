@@ -52,6 +52,7 @@
                                 </a>
                             </div>
                         </div>
+						@include ('layouts.errors')
                     </form>
 					</div>
                 </div>

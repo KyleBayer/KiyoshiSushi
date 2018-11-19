@@ -26,7 +26,6 @@ Route::post('/register', 'RegistrationController@store');
 
 
 
-Route::get('/login', 'AuthController@login');
 Route::get('/login', 'SessionsController@create');
 
 Route::post('/login', 'SessionsController@store');
