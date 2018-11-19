@@ -2,17 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register Here</div>
-                <br/><br/>
-                <div class="panel-body">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Register Here</div>
+                <div class="card-body">
                     <form method="POST" action="/register">
-
                         {{ csrf_field() }}
-
-             
                         <div class="form-group">
                             <label for="name">Full Name:</label>
                             <input type="text" class="form-control" id="name" name="name" value = "{{ old('name') }}" required autofocus>
