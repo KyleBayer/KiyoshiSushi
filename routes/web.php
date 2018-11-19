@@ -19,7 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 Route::get('/register', 'RegistrationController@create');
+=======
+Route::get('activation/{key}', 'Auth\RegisterController@activation');
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
 
 Route::post('/register', 'RegistrationController@store');
 

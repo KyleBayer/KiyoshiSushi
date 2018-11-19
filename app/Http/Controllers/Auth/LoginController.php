@@ -1,10 +1,15 @@
 <?php
-
+ 
 namespace App\Http\Controllers\Auth;
-
+ 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+<<<<<<< HEAD
 
+=======
+use Illuminate\Http\Request;
+ 
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
 class LoginController extends Controller
 {
     /*
@@ -17,16 +22,20 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
     use AuthenticatesUsers;
-
+ 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/home';
-
+ 
     /**
      * Create a new controller instance.
      *
@@ -36,4 +45,48 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+<<<<<<< HEAD
 }
+=======
+ 
+    /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function credentials(Request $request) {
+        $credentials = $request->only($this->username(), 'password');
+        $credentials['status'] = 'active';
+        return $credentials;
+    }
+ 
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        $errors = [$this->username() => trans('auth.failed')];
+ 
+        // Load user from database
+        $user = \App\User::where($this->username(), $request->{$this->username()})->first();
+ 
+        // Check if user was successfully loaded, that the password matches
+        // and active is not 1. If so, override the default error message.
+        if ($user && \Hash::check($request->password, $user->password) && $user->status != 'active') {
+            $errors = [$this->username() => 'Your account is not active.'];
+        }
+ 
+        if ($request->expectsJson()) {
+            return response()->json($errors, 422);
+        }
+ 
+        return redirect()->back()
+            ->withInput($request->only($this->username(), 'remember'))
+            ->withErrors($errors);
+    }
+}
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
