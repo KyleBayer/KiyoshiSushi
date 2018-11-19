@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Auth;
  
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+<<<<<<< HEAD
+
+=======
 use Illuminate\Http\Request;
  
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
 class LoginController extends Controller
 {
     /*
@@ -18,7 +22,11 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
     use AuthenticatesUsers;
  
     /**
@@ -37,6 +45,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+<<<<<<< HEAD
+}
+=======
  
     /**
      * Get the needed authorization credentials from the request.
@@ -78,3 +89,4 @@ class LoginController extends Controller
             ->withErrors($errors);
     }
 }
+>>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
