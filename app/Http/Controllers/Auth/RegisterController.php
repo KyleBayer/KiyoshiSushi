@@ -1,15 +1,6 @@
 <?php
  
 namespace App\Http\Controllers\Auth;
-<<<<<<< HEAD
-
-use App\User;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
-
-=======
  
 use App\User;
 use App\Http\Controllers\Controller;
@@ -18,7 +9,6 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Mail;
  
->>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
 class RegisterController extends Controller
 {
     /*
@@ -31,11 +21,7 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-<<<<<<< HEAD
-
-=======
  
->>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
     use RegistersUsers;
  
     /**
@@ -80,19 +66,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-<<<<<<< HEAD
-            'first_name' => $data['name'],
-            'last_name' => $data['name'],
-=======
             'name' => $data['name'],
-<<<<<<< HEAD
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-    }
-}
-=======
->>>>>>> d40734c97cfff6564c5c9678bb9322a377ba9e0a
             'email' => $data['email'],
             'activation_key' => $data['activation_key'],
             'password' => bcrypt($data['password']),
@@ -160,4 +134,3 @@ class RegisterController extends Controller
         }
     }
 }
->>>>>>> 755f57ec6500e67644dade0ad3ce55e6b6d93c01
