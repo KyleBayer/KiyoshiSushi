@@ -54,7 +54,7 @@ class RegistrationForm extends FormRequest
         auth()->login($user);
         
 
-         \Mail::to($user)->send(new Welcome($user));
+         //\Mail::to($user)->send(new Welcome($user));
         // redirect to the home page
         return redirect()->home();
 
