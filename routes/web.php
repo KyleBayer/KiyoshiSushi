@@ -32,4 +32,4 @@ Route::post('/login', 'SessionsController@store');
 
 Route::get('/logout', 'SessionsController@destroy');
 
-Route::get('/order', 'OrderController@index');
+Route::get('/', 'OrderController@index');
