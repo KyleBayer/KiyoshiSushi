@@ -13,7 +13,14 @@ use App\Http\Requests\RegistrationForm;
 
 class OrderController extends Controller
 {
-   public function index()
+   public function __construct()
+    {
+        //$this->middleware('guest', ['except' => 'destroy']);
+        $this->middleware('guest')
+    }
+
+
+   public function Order()
     {
         return view('order');
     }
