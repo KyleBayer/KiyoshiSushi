@@ -13,6 +13,9 @@ use App\Http\Requests\RegistrationForm;
 
 class OrderController extends Controller
 {
+   public function index()
+    {
+        return view('order');
+    }
    
-   return view('order');
 }
