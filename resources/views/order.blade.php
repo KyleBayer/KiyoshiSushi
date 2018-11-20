@@ -10,9 +10,10 @@
     <div class="thumbnail">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Vegetable_gimbap.jpg/1200px-Vegetable_gimbap.jpg" alt="..." style="max-height: 150px" class="img-responsive">
       <div class="caption">
-        <h3>Food1</h3>
-        <p>DIS IS DA FEWD</p>
+        <h3>Sushi</h3>
+        <p>Sensei's Delicious Exotic Sushi</p>
         <p><a href="#" class="btn btn-default" role="button">Add</a></p>
+        <p>Price: $15.99 </p>
       </div>
     </div>
   </div>
