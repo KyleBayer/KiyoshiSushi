@@ -18,6 +18,13 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="./order">Order</a>
             </li>
+            <li>
+              @if (Auth::check())
+
+                <a class="nav-link ml-auto" href="#">{{ Auth::user()->first_name }}</a>
+
+              @endif
+            </li>
             
           </ul>
         </div>

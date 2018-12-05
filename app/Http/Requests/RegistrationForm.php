@@ -31,7 +31,8 @@ class RegistrationForm extends FormRequest
     {
         return [
             
-            'name' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed'
         ];
@@ -40,16 +41,17 @@ class RegistrationForm extends FormRequest
     public function persist()
     {
         //$user = User::create(request(['name', 'email', 'password']));
-        $user = User::create($this->only(['name', 'email', 'password']));
+        //$user = User::create($this->only(['first_name', 'last_name', 'email', 'password']));
 
 
-         /*$user = User::create([
+         $user = User::create([
 
-            'name' => request('name'),
+            'first_name' => request('first_name'),
+            'last_name' => request('last_name'),
             'email' => request('email'),
             'password' => bcrypt(request('password'))
 
-         ]);*/
+         ]);
         
         auth()->login($user);
         
