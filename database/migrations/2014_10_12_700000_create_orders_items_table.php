@@ -18,7 +18,6 @@ class CreateOrdersItems extends Migration
             $table->integer('Meal_Id');
             $table->integer('Quantity');
             $table->string('Comments');
-            $table->integer('Total_Amount');
         });
     }
 

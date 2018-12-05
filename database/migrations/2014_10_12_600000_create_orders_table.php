@@ -17,8 +17,8 @@ class CreateOrders extends Migration
             $table->increments('Order_Id');
             $table->integer('Customer_Id');
             $table->date('Order_Date');
-            $table->date('Date_Purchased');
-            $table->integer('Product_Qty');
+            $table->integer('Payment_Method');
+            
         });
     }
 

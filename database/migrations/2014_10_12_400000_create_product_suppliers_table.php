@@ -19,6 +19,8 @@ class CreateProductSuppliersTable extends Migration
             $table->integer('Supplier_Id');
             $table->string('Supplier_Address');
             $table->double('Product_Price', 8, 2);
+            $table->string('Comment');
+
         });
     }
 
