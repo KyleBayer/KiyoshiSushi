@@ -1,5 +1,77 @@
 @extends('layouts.master')
 
+@section ('title')
+  Menu
+@endsection
+
+@section('content')
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card">
+<div class="card-header">{{ __('Menu Items') }}</div>
+<ul>
+  @foreach ($Meals as $Meal)
+    <li>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Vegetable_gimbap.jpg/1200px-Vegetable_gimbap.jpg" style="width:5em; height:6em;">
+      {{ $Meal->Meal_Name }}<p>     $</p>{{ $Meal->Meal_Price }}
+      {{ $Meal->Meal_Desc }} 
+    </li>
+  @endforeach
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- @extends('layouts.master')
+
 
 @section ('title')
   Order Kiyoshi Sushi
@@ -81,3 +153,4 @@
 
 @endsection
 
+ -->

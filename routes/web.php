@@ -17,8 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/order', 'OrdersController@index');
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/register', 'RegistrationController@create');
@@ -28,10 +26,12 @@ Route::post('/register', 'RegistrationController@store');
 
 
 
-Route::get('/login', 'SessionsController@create');
+Route::get('/login', 'SessionsController@create')->name('login');;
 
 Route::post('/login', 'SessionsController@store');
 
 Route::get('/logout', 'SessionsController@destroy');
 
-Route::get('order', 'OrderController@Order');
+Route::get('/order', 'OrderController@Order');
+
+Route::get('/users', 'UsersController@index');
