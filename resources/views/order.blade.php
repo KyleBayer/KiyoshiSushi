@@ -5,24 +5,31 @@
 @endsection
 
 @section('content')
+  @foreach ($Meals as $Meal)
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-8">
 <div class="card">
-<div class="card-header">{{ __('Menu Items') }}</div>
-<ul>
-  @foreach ($Meals as $Meal)
-    <li>
+<div class="card-header">{{ __( $Meal->Meal_Name ) }}</div>
+
+    
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Vegetable_gimbap.jpg/1200px-Vegetable_gimbap.jpg" style="width:5em; height:6em;">
-      {{ $Meal->Meal_Name }}<p>     $</p>{{ $Meal->Meal_Price }}
+        
+      <br></br>
+      ${{ $Meal->Meal_Price }}
+      <br></br>
       {{ $Meal->Meal_Desc }} 
-    </li>
-  @endforeach
+    
 </ul>
 </div>
 </div>
 </div>
 </div>
+<br></br>
+<br></br>
+<br></br>
+
+  @endforeach
 
 @endsection
 
