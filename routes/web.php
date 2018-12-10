@@ -25,7 +25,7 @@ Route::get('activation/{key}', 'Auth\RegisterController@activation');
 Route::post('/register', 'RegistrationController@store');
 Route::get('/purchase', 'PurchaseController@index');
 Route::post('/purchase', 'PurchaseController@insert');
-Route::get('/showpurchase', 'PurchaseController@show');
+Route::get('/showpurchases', 'PurchaseController@show');
 
 
 
@@ -37,5 +37,8 @@ Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/order', 'OrderController@Order');
+
+Route::get('/createorder', 'OrderController@index');
+Route::post('/createorder', 'OrderController@insert');
 
 Route::get('/users', 'UsersController@index');

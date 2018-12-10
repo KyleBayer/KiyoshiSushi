@@ -16,7 +16,7 @@ class Meal extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'Meal_Name', 'Meal_Price', 'Meal_Desc', 'Supplier_Address'
+        'Meal_Name', 'Meal_Price', 'Meal_Desc', 'Supplier_Address',
     ];
 
     /**

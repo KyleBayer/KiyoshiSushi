@@ -14,9 +14,9 @@
 <div class="card">
 <div class="card-header">{{ __( $Purchase->Purchase_Date ) }}</div>
       
-      ${{ $Purchase->Product_Supplier_Id }}
+      {{ $Purchase->Product_Supplier_Id }}
       <br></br>
-      {{ $Purchase->Prodcut_Qty }} 
+      {{ $Purchase->Product_Qty }} 
       <br></br>
       {{ $Purchase->Price_Purchased }}
       <br></br>

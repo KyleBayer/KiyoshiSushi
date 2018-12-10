@@ -27,7 +27,7 @@ class PurchaseController extends Controller {
 
         $Purchases = DB::table('Purchases');
    
-        $Purchases = $Purchases->get();
+        $Purchaspes = $Purchases->get();
 
         return view('showpurchases', ['Purchases' => $Purchases]);
 
