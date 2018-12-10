@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersItems extends Migration
+class CreateOrdersItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,7 +18,6 @@ class CreateOrdersItems extends Migration
             $table->integer('Meal_Id');
             $table->integer('Quantity');
             $table->string('Comments');
-            $table->integer('Total_Amount');
         });
     }
 

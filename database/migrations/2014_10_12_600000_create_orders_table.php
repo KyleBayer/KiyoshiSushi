@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrders extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,8 +17,8 @@ class CreateOrders extends Migration
             $table->increments('Order_Id');
             $table->integer('Customer_Id');
             $table->date('Order_Date');
-            $table->date('Date_Purchased');
-            $table->integer('Product_Qty');
+            $table->integer('Payment_Method');
+            
         });
     }
 
