@@ -23,6 +23,10 @@ Route::get('/register', 'RegistrationController@create');
 
 Route::get('activation/{key}', 'Auth\RegisterController@activation');
 Route::post('/register', 'RegistrationController@store');
+Route::get('/purchase', 'PurchaseController@index');
+Route::post('/purchase', 'PurchaseController@insert');
+Route::get('/showpurchase', 'PurchaseController@show');
+
 
 
 
