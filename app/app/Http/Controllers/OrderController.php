@@ -22,8 +22,28 @@ class OrderController extends Controller
     {
         return view('createorder');
     }
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'Meal_Name' => 'required|string|max:255',
+            'Meal_Price' => 'required',
+            'Supplier_Address' => 'required|max:255',
+            'Meal_Desc' => 'required|max:255',
+        ]);
+    }
+    protected function insert(array $data)
+    {
+        return Meal::insert([
+            'Meal_Name' => $data['Meal_Name'],
+            'Meal_Price' => $data['Meal_Price'],
+            'Supplier_Address' => $data['Supplier_Address'],
+            'Meal_Desc' => $data['Meal_Desc']
+        ]);
+    }
 
-    public function insert(Request $request)
+
+
+    /*public function insert(Request $request)
     {
       $Meal_Name = $request->input('Meal_Name');
       $Meal_Price = $request->input('Meal_Price');
@@ -39,7 +59,7 @@ class OrderController extends Controller
       
       echo "Meal added successfully<br/>";
       echo '<a href = "/createorder">Click Here to return</a>';
-    }
+    }*/
 
    public function Order()
     {

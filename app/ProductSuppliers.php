@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Meal extends Authenticatable
+class PurchaseSuppliers extends Authenticatable
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class Meal extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'Meal_Id', 'Meal_Name', 'Meal_Price', 'Meal_Desc', 'Supplier_Address',
+        'Product_Supplier_Id', 'Product_Id', 'Supplier_Id', 'Supplier_Address', 'Product_Price', 'Comment',
     ];
 
     /**

@@ -1,0 +1,58 @@
+@extends('layouts.master')
+ 
+@section('content')
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Create Menu Item') }}</div>
+
+                <div class="card-body">
+                    <form method="POST" action="/createorder">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="mealName" class="col-sm-4 col-form-label text-md-right">{{ __('Meal Name:') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="Meal_Name" name="Meal_Name" value = "{{ ('meal name...') }}" required autofocus>
+
+                            </div>
+                        </div>
+ 
+                        <div class="form-group row">
+                            <label for="mealPrice" class="col-sm-4 col-form-label text-md-right">{{ __('Meal Price:') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="Meal_Price" name="Meal_Price" value = "{{ ('meal price...') }}" required autofocus>
+
+                            </div>
+                        </div>
+ 
+                        <div class="form-group row">
+                            <label for="supplierAddress" class="col-sm-4 col-form-label text-md-right">{{ __('Supplier Address:') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="Supplier_Address" name="Supplier_Address" value = "{{ ('supplier address...') }}" required autofocus>
+
+                            </div>
+                        </div>
+ 
+                        <div class="form-group row">
+                            <label for="supplierAddress" class="col-sm-4 col-form-label text-md-right">{{ __('Meal Desc:') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="Meal_Desc" name="Meal_Desc" value = "{{ ('meal description...') }}" required autofocus>
+
+                            </div>
+                        </div>
+						@include ('layouts.errors')
+                    </form>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

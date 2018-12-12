@@ -6,21 +6,25 @@
 
 @section ('content')
 
-@foreach ($Purchases as $Purchase)
+@foreach ($ProductSuppliers as $ProductSupplier)
 
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-8">
 <div class="card">
-<div class="card-header">{{ __( $Purchase->Purchase_Date ) }}</div>
+<div class="card-header">{{ __('Records') }}</div>
       
-      {{ $Purchase->Product_Supplier_Id }}
+      {{ $ProductSupplier->Product_Supplier_Id }}
       <br></br>
-      {{ $Purchase->Product_Qty }} 
+      {{ $ProductSupplier->Product_Id }} 
       <br></br>
-      {{ $Purchase->Price_Purchased }}
+      {{ $ProductSupplier->Supplier_Id }}
       <br></br>
-      {{ $Purchase->Date_Purchased }}
+      {{ $ProductSupplier->Supplier_Address }}
+      <br></br>
+      {{ $ProductSupplier->Product_Price }}
+      <br></br>
+      {{ $ProductSupplier->comment }}
     
 </div>
 </div>

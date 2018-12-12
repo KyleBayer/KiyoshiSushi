@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function(){
+	return view ('about');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -25,7 +29,8 @@ Route::get('activation/{key}', 'Auth\RegisterController@activation');
 Route::post('/register', 'RegistrationController@store');
 Route::get('/purchase', 'PurchaseController@index');
 Route::post('/purchase', 'PurchaseController@insert');
-Route::get('/showpurchases', 'PurchaseController@show');
+Route::get('/showpurchases', 'ProductSupplierController@show');
+
 
 
 
@@ -37,6 +42,8 @@ Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/order', 'OrderController@Order');
+Route::get('/editmeal', 'OrderController@showedit');
+Route::post('/editmeal', 'OrderController@edit');
 
 Route::get('/createorder', 'OrderController@index');
 Route::post('/createorder', 'OrderController@insert');

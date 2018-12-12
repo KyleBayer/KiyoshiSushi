@@ -8,12 +8,12 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
-class PurchaseController extends Controller {
+class ProductSuppliersController extends Controller {
    
    public function __construct()
    {
         //$this->middleware('guest', ['except' => 'destroy']);
-        $this->middleware('guest');
+        $this->middleware('auth');
    }
 
    public function index()
@@ -25,11 +25,11 @@ class PurchaseController extends Controller {
    public function show()
    {
 
-        $ProductSuppliers = DB::table('Product_Suppliers');
+        $Purchases = DB::table('Purchases');
    
-        $ProductSuppliers = $Purchases->get();
+        $Purchaspes = $Purchases->get();
 
-        return view('showpurchases', ['Product_Suppliers' => $ProductSuppliers]);
+        return view('showpurchases', ['Purchases' => $Purchases]);
 
    }
    

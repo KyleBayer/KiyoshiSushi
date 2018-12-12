@@ -19,6 +19,7 @@
       ${{ $Meal->Meal_Price }}
       <br></br>
       {{ $Meal->Meal_Desc }} 
+      <a href="{{ route('editmeal', $Meal->Meal_Name) }}" class="btn btn-primary">Edit Menu Item</a>
     
 </ul>
 </div>
